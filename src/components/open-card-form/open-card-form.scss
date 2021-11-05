@@ -1,0 +1,39 @@
+.list {
+  &-textarea{
+    background: white;
+    border: 3px;
+    border-radius: 10px;
+    box-shadow: none;
+    height: auto;
+    margin-bottom: 4px;
+    width: 100%;
+    max-height: 320px;
+    min-height: 54px;;
+    padding: 10px;
+    resize: none;
+    outline: none;
+    overflow: hidden;
+  }
+}
+
+.form {
+  &-open{
+    display: flex;
+    justify-content: inherit;
+  }
+  &-close{
+    margin: 0 13px;
+    background: none;
+    border: none;
+    font-size: 26px;
+    padding: 0;
+    color: white;
+  }
+  &-close:hover{
+    opacity: 0.7;
+  }
+  &-add-item {
+    margin: 0 13px 0 0;
+    padding: 5px 15px;
+  }
+}

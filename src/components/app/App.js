@@ -1,25 +1,28 @@
 import { Container } from "react-bootstrap";
+import Header from "../header/Header";
+import ListComponent from "../list-component/ListComponent";
 
-import Header from "./Header";
-import Footer from "./Footer";
-import ListComponent from "./list-component/ListComponent";
-
-import HomeScreen from "../screens/HomeScreen";
+import {DragDropContext} from "react-beautiful-dnd";
 
 
 function App() {
-  return (
-    <div>
-        <Header/>
-        <main className='py-3 mx-2'>
-            <Container fluid>
-                <HomeScreen/>
-                <ListComponent title="List Component"/>
-            </Container>
-        </main>
-        <Footer/>
-    </div>
-  );
+
+    const onDragEnd = (result) => {
+        // reorder our column
+    }
+
+    return (
+            <div>
+                <Header/>
+                <main className='py-3 mx-2'>
+                    <DragDropContext onDragEnd={onDragEnd()}>
+                        <Container fluid>
+                            <ListComponent title="List Component"/>
+                        </Container>
+                    </DragDropContext>
+                </main>
+            </div>
+    );
 }
 
 export default App;

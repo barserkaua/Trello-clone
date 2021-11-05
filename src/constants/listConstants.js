@@ -1,0 +1,9 @@
+export const CARD_FORM_OPEN = 'CARD_FORM_OPEN';
+export const CARD_FORM_CLOSE = 'CARD_FORM_CLOSE';
+export const CARD_FORM_ADD_ITEM = 'CARD_FORM_ADD_ITEM';
+export const CARD_FORM_FAIL = 'CARD_FORM_FAIL';
+
+export const LIST_FORM_OPEN = 'LIST_FORM_OPEN';
+export const LIST_FORM_CLOSE = 'LIST_FORM_CLOSE';
+export const LIST_FORM_ADD_NEW_LIST = 'LIST_FORM_ADD_NEW_LIST';
+export const LIST_FORM_FAIL = 'LIST_FORM_FAIL';

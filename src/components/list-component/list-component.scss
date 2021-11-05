@@ -1,0 +1,40 @@
+.list {
+  &-component{
+    background: linear-gradient(-45deg, #207dc9, #ed6fa5);
+    border-radius: 20px;
+    width:19rem;
+    padding: 8px;
+    text-align: center;
+  }
+  &-component-form{
+    width:19rem;
+    padding: 8px;
+  }
+}
+
+.btn-block {
+  width: -webkit-fill-available;
+  background: #1a1e21;
+  font-size: 13px;
+}
+
+.add-new-list {
+  background-color: rgba(205, 214, 219, 0.3);
+  border: none;
+  text-align: left;
+  padding: 5px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  color: white;
+}
+
+.add-new-list:hover {
+  opacity: 0.7;
+  background-color: rgba(205, 214, 219, 0.3);
+}
+
+.lists-col {
+  display: flex;
+  align-items: start;
+}
+
