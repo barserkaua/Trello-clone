@@ -10,13 +10,11 @@ import {
     LIST_FORM_FAIL,
 } from "../constants/listConstants";
 
-import uuid from "uuidv4";
-
 const initialState = [
 
     {
-        id: "list-0",
-        cards: ["card-0"],
+        id: `list-${0}`,
+        cards: [`card-${0}`],
         title: "myList",
         board: "board-0"
     }
@@ -59,7 +57,7 @@ const initialState = [
 //    }
 //]
 
-export const listReducer = (state={itemLists:initialState, listFormOpen:false}, action) => {
+export const listReducer = (state={itemLists:initialState, cards:[], listFormOpen:false}, action) => {
     switch (action.type) {
         case CARD_FORM_OPEN:
             state.itemLists.map(item => {
@@ -86,7 +84,7 @@ export const listReducer = (state={itemLists:initialState, listFormOpen:false}, 
                     item.cards = [...item.cards, text]
                 }
             })
-            return {...state, listFormOpen: false}
+            return {...state, cards: [...state.cards, text], listFormOpen: false}
 
         case LIST_FORM_OPEN:
             return {
@@ -107,7 +105,7 @@ export const listReducer = (state={itemLists:initialState, listFormOpen:false}, 
                 title: title,
                 formCardOpen: false,
                 cards: [],
-                id: listId+1,
+                id: `list-${listId}`,
             }
 
             const newState = {

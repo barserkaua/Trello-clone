@@ -10,10 +10,14 @@ const reducer = combineReducers({
 const listsItemFromStorage = localStorage.getItem('itemLists') ?
     JSON.parse(localStorage.getItem('itemLists')) : []
 
+const cardsItemFromStorage = localStorage.getItem('cards') ?
+    JSON.parse(localStorage.getItem('cards')) : []
+
 const initialState = {
     lists: {
-        itemLists: listsItemFromStorage
-    }
+        itemLists: listsItemFromStorage,
+        cards: cardsItemFromStorage
+    },
 }
 
 const middleware = [thunk]

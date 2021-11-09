@@ -68,5 +68,6 @@ export const cardFormAddNewCard = (text, id) => async (dispatch, getState) => {
     }
     // we save our cart history in localStorage
     localStorage.setItem('itemLists', JSON.stringify(getState().lists.itemLists))
+    localStorage.setItem('cards', JSON.stringify(getState().lists.cards))
 }
 

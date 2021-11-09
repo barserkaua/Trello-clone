@@ -2,14 +2,13 @@ import { Button } from "react-bootstrap";
 import Textarea from 'react-textarea-autosize';
 import { useDispatch } from "react-redux";
 import { cardFormClose, cardFormOpen, cardFormAddNewCard } from "../../actions/cardActions";
-
 import './open-card-form.scss'
 import {useState} from "react";
 
-function OpenCardForm({list}) {
+function OpenCardForm({list, cards}) {
     const {id, formCardOpen} = list;
 
-    const cardId = +list.cards.length + 1
+    const cardId = +cards.length + 1
 
     const dispatch = useDispatch();
 
@@ -26,7 +25,7 @@ function OpenCardForm({list}) {
 
     const HandleAddNewCard = (e) => {
         if (text.length > 0 && text !== null && text !== undefined) {
-            dispatch(cardFormAddNewCard({text, cardId}, id))
+            dispatch(cardFormAddNewCard({text, cardId:`card-${cardId}`}, id))
         }
     }
 
